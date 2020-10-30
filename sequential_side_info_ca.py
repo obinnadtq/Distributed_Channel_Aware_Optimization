@@ -138,15 +138,12 @@ class SequentialDistributedIterativeCASideinformation():
 
 
         temporary = np.tile(np.expand_dims(pzbarjPartial_yi, diff_pos), self.put_in_position(np.ones(len(partial_j_elements) + 2, dtype=int), diff_pos, self.Nz[sensor_idx]))
-        temporary2 = np.tile(np.expand_dims(pyjpartial_yi,0), np.append(self.Nz[sensor_idx], np.ones(len(partial_elements),dtype=int)))
 
         c_temp =   temporary * KL
 
         tmp_sum = [list(np.sort(partial_elements)).index(idx) for idx in partial_j_elements]
 
         c_temp = np.sum(c_temp, tuple(tmp_sum))
-
-        # np.tile(np.expand_dims(c_temp, -1), (1, self.Ny[sensor_idx]))
 
         C = np.tile(np.expand_dims(np.sum(self.pzbari_zi[sensor_idx], 0), -1), (1, self.Ny[sensor_idx])) * c_temp
 

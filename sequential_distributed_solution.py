@@ -15,7 +15,7 @@ class SequentialDistributedCA():
         self.Nz = Nz
         self.pzbari_zi = pzbari_zi
         self.name = 'SCA'
-        self.sensor_opt_order = [0, 1, 2]
+        self.sensor_opt_order = [0, 1]
         self.accuracy_ca = 1e-10
         self.max_iter_ca = 100
         self.accuracy_sca = 0.001
