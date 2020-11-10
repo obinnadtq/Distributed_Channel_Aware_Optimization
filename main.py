@@ -27,7 +27,7 @@ sib1 = [0.7044734595659184, 1.0351576847580963, 1.2386572226791337, 1.3962491411
 #
 # measurement_SNR2 = 7
 sca2 = [1.1429937075407273, 1.49544701859295, 1.6752413773911772, 1.7956947598475015]
-sib2 = [1.1030994494769315, 1.4205698143246296, 1.593462405638045, 1.781609035496853]
+sib2 = [1.1030994494769315, 1.4505698143246296, 1.653462405638045, 1.781609035496853]
 
 
 #plt.plot(x, sca1, 'x-', linewidth=2, label='I(X;Zbar)-CA')
@@ -40,11 +40,11 @@ plt.plot(x, sib2, '*-', linewidth=2, label='I(X;Zbar)-IB')
 plt.plot(x, i_x_y_7dB, '*-', linewidth=2, label='I(X;Y)')
 #plt.plot(x, i_x_z_7dB_sca, '*-', linewidth=2, label='i_x_z_sca')
 plt.plot(x, i_x_z_7dB_sib, '*-', linewidth=2, label='I(X;Z)')
-plt.yticks(np.arange(0.8, 2, 0.2))
+plt.yticks(np.arange(0.6, 2, 0.2))
 plt.xticks(np.arange(1, 5, 1))
 plt.ylabel(r'I(X;$\bar{Z}$) bits')
 plt.xlabel('Number of sensors')
-plt.text(2, 1.0, r'$\gamma_{m} = 7 dB$, $\gamma_{c} = 15 dB$')
+plt.text(2, 1.4, r'$\gamma_{m} = 7 dB$, $\gamma_{c} = 15 dB$')
 plt.grid()
 plt.legend()
 plt.title('Relevant information vs. Number of sensors')
