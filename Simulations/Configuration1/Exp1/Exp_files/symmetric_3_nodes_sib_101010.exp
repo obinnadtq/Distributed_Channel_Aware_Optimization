@@ -1,0 +1,28 @@
+Nx = 4
+N_sensors = 5
+Ny = [64, 64, 64, 64, 64]
+Nz = [8, 8, 8, 8, 8]
+SNR_db = [7, 7, 7, 7, 7]
+
+sensor_opt_order = [0, 1, 2, 3, 4]
+sensor_opt_with_side = [1, 1, 1, 1, 1]
+target_rates = [1.0, 1.0, 1.0, 1.0, 1.0]
+min_beta = [0.01, 0.01, 0.01, 0.01, 0.01]
+max_beta = [100, 100, 100, 100, 100]
+accuracy_aib = 0.001
+max_iter_aib = 1
+accuracy_bs = 0.001
+max_iter_bs = 50
+accuracy_ib = 1e-10
+max_iter_ib = 100
+
+init_type = 'uniform'
+uniform_ib_sensor_init = True
+ib_solver = 'iterative'
+beta_evolution = 'bisection'
+ib_conv_crit = 'JS'
+aib_conv_crit = 'JS'
+
+
+
+
